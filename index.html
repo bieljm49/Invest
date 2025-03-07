@@ -40,13 +40,13 @@
       margin-top: 1rem;
     }
     nav ul li a {
-      color: #fff;
+      color: #ffcc00;
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s, transform 0.3s;
     }
     nav ul li a:hover {
-      color: #ffcc00;
+      color: white;
       transform: translateY(-2px);
     }
     .container {
@@ -95,6 +95,37 @@
     html {
       scroll-behavior: smooth;
     }
+
+    nav a {
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 70%;
+    background: rgba(255, 255, 255, 0.212); /* Fundo bonito só no texto */
+    border-radius: 5px;
+    z-index: -1;
+    transition: height 0.3s ease-in-out;
+}
+
+nav a:hover::before {
+    height: 100%;
+}
+
+nav a:hover {
+    text-shadow: 2px 2px 5px rgba(219, 211, 211, 0.5); /* Sombra ao passar o mouse */
+}
   </style>
 </head>
 <body>
